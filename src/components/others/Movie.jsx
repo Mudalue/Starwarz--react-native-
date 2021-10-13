@@ -16,6 +16,11 @@ export default function Movie({ navigation, route }) {
       return error.response;
     }
   };
+  const filter = (url) =>{
+      const sort = result.filter((d)=>d.films === url);
+      console
+      return sort;
+  }
   useEffect(() => {
     (async () => {
       const response = await getDetails();
@@ -29,10 +34,8 @@ export default function Movie({ navigation, route }) {
       
       if (response.status === 200){
           let result = response.data.results;
-         let _find = result.filter((d)=>(d.films.gender === "male"));
-         let _filter = _find
-         console.log(_filter);
-      }
+        
+       }
     })();
   }, []);
   return (
